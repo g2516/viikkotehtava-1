@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Leffa-tietokanta>
+	<Elokuva>
+	    <Nimi>Hujiksen Hapatukset</Nimi>
+	    <Ohjaaja>Vepsä</Ohjaaja>
+	    <Genre>Kauhu</Genre>
+	    <Tahdet>3</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Koodin Vallankumous</Nimi>
+	    <Ohjaaja>Tupaq Castro</Ohjaaja>
+	    <Genre>Action</Genre>
+	    <Tahdet>1</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Paikattu Sateenvarjo</Nimi>
+	    <Ohjaaja>Pekka Puu</Ohjaaja>
+	    <Genre>Komedia</Genre>
+	    <Tahdet>5</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>ASDF-Kun aika ei riitä edelleenkään</Nimi>
+	    <Ohjaaja>Lars Gustafson</Ohjaaja>
+	    <Genre>Western</Genre>
+	    <Tahdet>0</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Huono maku: Tarina melankolisista maanviljelijäkääpiöistä</Nimi>
+	    <Ohjaaja>Heikki Vajaaoksa</Ohjaaja>
+	    <Genre>Southern Texas Gore Splatter</Genre>
+	    <Tahdet>5</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Huono maku II: Tarina melankolisista maanviljelijäkääpiöistä jatkuu</Nimi>
+	    <Ohjaaja>Heikki Vajaaoksa</Ohjaaja>
+	    <Genre>Southern Texas Gore Splatter</Genre>
+	    <Tahdet>5</Tahdet>
+	</Elokuva>
+</Leffa-tietokanta>

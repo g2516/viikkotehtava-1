@@ -13,6 +13,9 @@
         <asp:HyperLink id="teht2" Text="Tehtävä 2" NavigateUrl="~/Teht2/Default.aspx" runat="server" />
         <br />
         <br />
+        <asp:HyperLink id="teht3" Text="Tehtävä 3" NavigateUrl="~/Teht3/Home.aspx" runat="server" />
+        <br />
+        <br />
     </div>
 </asp:Content>
 
