@@ -24,7 +24,7 @@ public partial class Leffat : System.Web.UI.Page
             TreeNode td = new TreeNode();
             td = puu.Nodes[0];
 
-            // Populate TreeViw with DOM nodes
+            // Populate TreeView with DOM nodes
             AddNode(dom.DocumentElement, td);
             puu.CollapseAll();
         }
@@ -40,8 +40,7 @@ public partial class Leffat : System.Web.UI.Page
         XmlNodeList nodeList;
         int i;
 
-        // Loop through the XML nodes until the leaf is reached.
-        // Add the nodes to the TreeView during the looping process.
+        // Loop through the XML nodes and add them to TreeView
         if (inXmlNode.HasChildNodes)
         {
             nodeList = inXmlNode.ChildNodes;
@@ -55,8 +54,7 @@ public partial class Leffat : System.Web.UI.Page
         }
         else
         {
-            // Here you need to pull the data from the XmlNode based on the
-            // type of node, whether attribute values are required, and so forth.
+            // Here you need to pull the data from the XmlNode based on the type of node
             inTreeNode.Text = (inXmlNode.OuterXml).Trim();
         }
     }          

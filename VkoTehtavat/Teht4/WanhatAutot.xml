@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wanhatautot generated="2012-11-30T10:00:00">
+<Auto>
+<aid>101</aid>
+<rekkari>KJL-132</rekkari>
+<merkki>Audi</merkki>
+<malli>A4</malli>
+<vm>2008</vm>
+<myyntiHinta>39000</myyntiHinta>
+<sisaanOstoHinta>28250</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>201</aid>
+<rekkari>AU-21</rekkari>
+<merkki>Audi</merkki>
+<malli>A3</malli>
+<vm>2009</vm>
+<myyntiHinta>30000</myyntiHinta>
+<sisaanOstoHinta>25250</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>161</aid>
+<rekkari>OAT-616</rekkari>
+<merkki>Datsun</merkki>
+<malli>Finn 1200</malli>
+<vm>1973</vm>
+<myyntiHinta>1000</myyntiHinta>
+<sisaanOstoHinta>666</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>122</aid>
+<rekkari>TYI-987</rekkari>
+<merkki>Ford</merkki>
+<malli>Sierra 2.0i Laser</malli>
+<vm>1989</vm>
+<myyntiHinta>2000</myyntiHinta>
+<sisaanOstoHinta>666</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>222</aid>
+<rekkari>FYI-987</rekkari>
+<merkki>Ford</merkki>
+<malli>Focus</malli>
+<vm>2001</vm>
+<myyntiHinta>4000</myyntiHinta>
+<sisaanOstoHinta>2000</sisaanOstoHinta>
+</Auto>
+
+<Auto>
+<aid>131</aid>
+<rekkari>TRW-335</rekkari>
+<merkki>Mazda</merkki>
+<malli>626 2.0HB GLX</malli>
+<vm>1997</vm>
+<myyntiHinta>37500</myyntiHinta>
+<sisaanOstoHinta>22916</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>141</aid>
+<rekkari>XXS-103</rekkari>
+<merkki>Nissan</merkki>
+<malli>Maxima 2.0-24 QX V6</malli>
+<vm>1995</vm>
+<myyntiHinta>11000</myyntiHinta>
+<sisaanOstoHinta>8500</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>151</aid>
+<rekkari>XXJ-331</rekkari>
+<merkki>Nissan</merkki>
+<malli>Patrol GR Wagon</malli>
+<vm>1989</vm>
+<myyntiHinta>9500</myyntiHinta>
+<sisaanOstoHinta>8250</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>171</aid>
+<rekkari>TM-25</rekkari>
+<merkki>Porsche</merkki>
+<malli>911 SC</malli>
+<vm>1979</vm>
+<myyntiHinta>30000</myyntiHinta>
+<sisaanOstoHinta>20000</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>911</aid>
+<rekkari>XYZ-132</rekkari>
+<merkki>Volvo</merkki>
+<malli>V70 T5R</malli>
+<vm>1997</vm>
+<myyntiHinta>18950</myyntiHinta>
+<sisaanOstoHinta>10583</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>912</aid>
+<rekkari>XLM-112</rekkari>
+<merkki>Volvo</merkki>
+<malli>V40 1.8 Sportswag.</malli>
+<vm>1998</vm>
+<myyntiHinta>13450</myyntiHinta>
+<sisaanOstoHinta>4416</sisaanOstoHinta>
+</Auto>
+<Auto>
+<aid>913</aid>
+<rekkari>XLS-11</rekkari>
+<merkki>Volvo</merkki>
+<malli>V70</malli>
+<vm>2002</vm>
+<myyntiHinta>9900</myyntiHinta>
+<sisaanOstoHinta>8000</sisaanOstoHinta>
+</Auto>
+</Wanhatautot>
