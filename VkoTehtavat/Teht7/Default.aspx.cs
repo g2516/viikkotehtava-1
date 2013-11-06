@@ -97,18 +97,78 @@ public partial class Teht7_Default : System.Web.UI.Page
         toGridView(autoLista);
     }
 
+    // Purkkamainen validointi, mutta meni vähän aika kortille sen osan tehtävää suhteen...
     protected void autoNakyma_RowUpdate(object sender, GridViewUpdateEventArgs e)
     {
         GridViewRow row = autoNakyma.Rows[e.RowIndex];
-        autoLista[e.RowIndex].Merkki = ((TextBox)(row.Cells[1].Controls[0])).Text;
-        autoLista[e.RowIndex].Aid = ((TextBox)(row.Cells[2].Controls[0])).Text;
-        autoLista[e.RowIndex].Rekkari = ((TextBox)(row.Cells[3].Controls[0])).Text;
-        autoLista[e.RowIndex].Malli = ((TextBox)(row.Cells[4].Controls[0])).Text;
-        autoLista[e.RowIndex].Vm = int.Parse(((TextBox)(row.Cells[5].Controls[0])).Text);
-        autoLista[e.RowIndex].MyyntiHinta = int.Parse(((TextBox)(row.Cells[6].Controls[0])).Text);
-        autoLista[e.RowIndex].SOstoHinta = int.Parse(((TextBox)(row.Cells[7].Controls[0])).Text);
-        autoNakyma.EditIndex = -1;
-        toGridView(autoLista);
+        Regex regexNum = new Regex(@"[\d]");
+        Regex regexAlph = new Regex(@"^[a-zA-Z0-9]+$");
+        Regex regexRek = new Regex(@"^[A-Z]{3}-[0-9]{3}$");
+        try
+        {
+
+            if (regexAlph.IsMatch(((TextBox)(row.Cells[1].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].Merkki = ((TextBox)(row.Cells[1].Controls[0])).Text;
+            }
+            else
+            {
+                autoLista[e.RowIndex].Merkki = "---";
+            }
+            if (regexNum.IsMatch(((TextBox)(row.Cells[2].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].Aid = ((TextBox)(row.Cells[2].Controls[0])).Text;
+            }
+            else
+            {
+                autoLista[e.RowIndex].Aid = "null";
+            }
+            if (regexRek.IsMatch(((TextBox)(row.Cells[3].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].Rekkari = ((TextBox)(row.Cells[3].Controls[0])).Text;
+            }
+            else
+            {
+                autoLista[e.RowIndex].Rekkari = "---";
+            }
+            if (regexAlph.IsMatch(((TextBox)(row.Cells[4].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].Malli = ((TextBox)(row.Cells[4].Controls[0])).Text;
+            }
+            else
+            {
+                autoLista[e.RowIndex].Malli = "---";
+            }
+            if (regexNum.IsMatch(((TextBox)(row.Cells[5].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].Vm = int.Parse(((TextBox)(row.Cells[5].Controls[0])).Text);
+            }
+            else
+            {
+                autoLista[e.RowIndex].Vm = 0;
+            }
+            if (regexNum.IsMatch(((TextBox)(row.Cells[6].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].MyyntiHinta = int.Parse(((TextBox)(row.Cells[6].Controls[0])).Text);
+            }
+            else
+            {
+                autoLista[e.RowIndex].MyyntiHinta = 0;
+            }
+            if (regexNum.IsMatch(((TextBox)(row.Cells[7].Controls[0])).Text))
+            {
+                autoLista[e.RowIndex].SOstoHinta = int.Parse(((TextBox)(row.Cells[7].Controls[0])).Text);
+            }
+            else
+            {
+                autoLista[e.RowIndex].SOstoHinta = 0;
+            }
+            autoNakyma.EditIndex = -1;
+            toGridView(autoLista);
+        }
+        catch
+        {
+        }
     }
 
     protected void autoNakyma_RowDelete(object sender, GridViewDeleteEventArgs e)
