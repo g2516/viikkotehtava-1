@@ -10,7 +10,10 @@
     <form id="form1" runat="server">
     <div class="wrapper">
     <h1>Autokauppias Jinta-Rouppi</h1>
-        <asp:Button ID="addNew" class="myButton" runat="server" OnClick="addNew_Click" Text="Lisää uusi auto"/>
+    <asp:Button ID="addNew" class="myButton" runat="server" OnClick="addNew_Click" Text="Lisää uusi auto"/>
+    <asp:Button ID="saveToFile" class="myButton" runat="server" OnClick="saveToFile_Click" Text="Tallenna tietokanta" />
+    <br />
+    <asp:Label ID="lbVirhe" class="error" runat="server" Text="" />
     <br />
     <br />
     <asp:GridView ID="autoNakyma" runat="server" AllowSorting="True" AllowPaging="True" 

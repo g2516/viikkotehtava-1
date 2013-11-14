@@ -16,6 +16,11 @@ body {
     text-align: center;
 }
 
+.error {
+    font-family:Arial;
+    color: red;
+}
+
 .wrapper {
     text-align:left;
     width:800px;

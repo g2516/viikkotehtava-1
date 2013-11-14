@@ -42,4 +42,24 @@ public class Serialisointi
 
         }
     }
+
+    // Käyttäjien deserialisointi
+    public static void DeSerialisoiKayttajat(string filePath, ref UserLista kayttajat)
+    {
+        XmlSerializer deserializer = new XmlSerializer(typeof(UserLista));
+        try
+        {
+            FileStream xmlFile = new FileStream(filePath, FileMode.Open);
+            kayttajat = (UserLista)deserializer.Deserialize(xmlFile);
+            xmlFile.Close();
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+
+        }
+    }
 }

@@ -24,7 +24,9 @@
         <asp:HyperLink id="teht6" Text="Tehtävä 6" NavigateUrl="~/Teht6/Default.aspx" runat="server" />
         <br />
         <br />
-        <asp:HyperLink id="teht7" Text="Tehtävä 7" NavigateUrl="~/Teht7/Default.aspx" runat="server" />
+        <asp:HyperLink id="teht7" Text="Tehtävä 7 ja 8:n VE1 heikompi autentikointi" NavigateUrl="~/Teht7/Default.aspx" runat="server" />
+        <br />
+        <asp:HyperLink id="teht8" Text="Tehtävä 8 VE2 vahvempi autentikointi" NavigateUrl="~/Teht8/Default.aspx" runat="server" />
         <br />
         <br />
     </div>

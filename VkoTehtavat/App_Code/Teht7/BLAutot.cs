@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 
 public class BLAutot
@@ -26,9 +29,14 @@ public class BLAutot
     }
 
     // Tallenetaan muutokset xml tiedostoon
-    public static void TallennaAutot(AutoLista autot)
+    public static void TallennaAutot(List<Auto> autoLista)
     {
-        Serialisointi.SerialisoiXml(HttpContext.Current.Server.MapPath("~/App_Data/Teht7/WanhatAutot.xml"), autot);
+        AutoLista lista = new AutoLista();
+        foreach (Auto item in autoLista)
+        {
+            lista.Autot.Add(item);
+        }
+        Serialisointi.SerialisoiXml(HttpContext.Current.Server.MapPath("~/App_Data/Teht7/WanhatAutot.xml"), lista);
     }
 
     // Listaus
@@ -57,5 +65,30 @@ public class BLAutot
         {
             return autoLista;
         }
+    }
+
+    // Käyttäjän autentikointi
+    public static bool AuthenticateUser(string username, string password)
+    {
+        // Haetaan käyttäjät xml-tiedostosta
+        UserLista users = new UserLista();
+        Serialisointi.DeSerialisoiKayttajat(HttpContext.Current.Server.MapPath("~/App_Data/Teht7/Users.xml"), ref users);
+
+        // Suolaus
+        byte[] saltBytes = Encoding.UTF8.GetBytes("suolaa");
+        byte[] saltedHashBytesUserName = new HMACMD5(saltBytes).ComputeHash(Encoding.UTF8.GetBytes(username));
+        byte[] saltedHashBytesPassword = new HMACMD5(saltBytes).ComputeHash(Encoding.UTF8.GetBytes(password));
+        string saltedHashStringUserName = Convert.ToBase64String(saltedHashBytesUserName);
+        string saltedHashStringPassword = Convert.ToBase64String(saltedHashBytesPassword);
+
+        // Tarkistetaan käyttäjät
+        for (int i = 0; i < users.users.Count; i++)
+        {
+            if (saltedHashStringUserName == users.users[i].UserName && saltedHashStringPassword == users.users[i].Password)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
